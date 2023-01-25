@@ -549,7 +549,7 @@
 <ol>
 <li>
 <p>在Web浏览器中， 输入<a href="http://cs144.keithw.org/hello">http://cs144.keithw.org/hello</a>, 并观察结果
-<img alt="fetch_web_page_by_web_browse.png" src="/images/fetch_web_page_by_web_browse.png" /></p>
+<img alt="fetch_web_page_by_web_browse.png" src="../lab_images/fetch_web_page_by_web_browse.png" /></p>
 </li>
 <li>
 <p>然后手动完成浏览器做的事情
@@ -558,7 +558,7 @@
 </code></pre></div></p>
 <p>该命令是告诉<code>telnet</code>程序在你的计算机和另一个计算机(名称为<strong>cs144.keithw.org</strong>)打开一个可靠的字节流，以及使用在另一台计算机上运行特定的服务 —— <strong>http</strong>服务。 http是Hyper-Text Transfer Protocol的缩写，超文本标记传输协议，万维网使用的协议。</p>
 <p>接着输入如下信息获取Web网页
-<img alt="fetch_web_page_by_hand_cmds.png" src="/images/fetch_web_page_by_hand_cmds.png" /></p>
+<img alt="fetch_web_page_by_hand_cmds.png" src="../lab_images/fetch_web_page_by_hand_cmds.png" /></p>
 <p><code>GET /hello HTTP/1.1</code>: 告诉服务器端URL的路径部分("/hello")</p>
 <p><code>Host: cs144.keithw.org</code>: 告诉服务器URL的主机部分("cs144.keithw.org")</p>
 <p><code>Connection: close</code>: 告诉服务器完成响应后立即关闭连接</p>
@@ -567,14 +567,14 @@
 <h3 id="_3">发一份电子邮件</h3>
 <p>由于课程实验文档中使用的是斯坦福校内的邮箱服务器，外网无法访问，因此选择了QQ邮箱来完成该实验。 整个操作流程会比实验文档中说明的流程复杂一点。</p>
 <p>telnet登录QQ邮箱， 在登陆时需要提供账号和校验码的Base64编码， 因此需要先转为base64编码的字符串，可通过如下网站在线进行转换, <a href="https://www.base64encode.org/">https://www.base64encode.org/</a></p>
-<p><img alt="send_email_email_addr_to_base64.png" src="/images/send_email_email_addr_to_base64.png" /></p>
-<p><img alt="send_email_auth_code_to_base64.png" src="/images/send_email_auth_code_to_base64.png" /></p>
+<p><img alt="send_email_email_addr_to_base64.png" src="../lab_images/send_email_email_addr_to_base64.png" /></p>
+<p><img alt="send_email_auth_code_to_base64.png" src="../lab_images/send_email_auth_code_to_base64.png" /></p>
 <p>首先，获取QQ邮箱授权码，如下图所示</p>
-<p><img alt="send_qq_email_get_auth_code.png" src="/images/send_qq_email_get_auth_code.png" /></p>
+<p><img alt="send_qq_email_get_auth_code.png" src="../lab_images/send_qq_email_get_auth_code.png" /></p>
 <p>完整的通过<code>telnet</code>发送email的操作流程如下图所示</p>
-<p><img alt="send_email_by_telnet.png" src="/images/send_email_by_telnet.png" /></p>
+<p><img alt="send_email_by_telnet.png" src="../lab_images/send_email_by_telnet.png" /></p>
 <h3 id="_4">监听和连接</h3>
-<p><img alt="listening_and_connection_test.png" src="/images/listening_and_connection_test.png" /></p>
+<p><img alt="listening_and_connection_test.png" src="../lab_images/listening_and_connection_test.png" /></p>
 <p><code>netcat -v -l -p 9090</code>: 表示运行服务器端程序，
 <code>telnet localhost 9090</code>: 表示客户端程序</p>
 <p>当客户端连接上服务器端后，在服务器端则打印如下信息</p>
